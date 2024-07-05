@@ -7,15 +7,11 @@ const Form = () => {
   console.log(clicked);
   const handlerFirst = (event) => {
     const value = event.target.value;
-    if (/^[a-zA-Z]*$/.test(value)) {
-      setFirstName(value);
-    }
+    setFirstName(value);
   };
   const handlerLast = (event) => {
     const value = event.target.value;
-    if (/^[a-zA-Z]*$/.test(value)) {
-      setLastName(value);
-    }
+    setLastName(value);
   };
   const DisName = () => {
     return <div>{`Full Name: ${firstName} ${lastName}`}</div>;
