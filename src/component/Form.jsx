@@ -5,10 +5,16 @@ const Form = () => {
   const [lastName, setLastName] = useState("");
   const [clicked, setClicked] = useState(false);
   const handlerFirst = (event) => {
-    setFirstName(event.target.value);
+    const value = event.target.value;
+    if (/^[a-zA-Z]*$/.test(value)) {
+      setFirstName(value);
+    }
   };
   const handlerLast = (event) => {
-    setLastName(event.target.value);
+    const value = event.target.value;
+    if (/^[a-zA-Z]*$/.test(value)) {
+      setLastName(value);
+    }
   };
   const DisName = () => {
     return <div>{`Full Name: ${firstName} ${lastName}`}</div>;
